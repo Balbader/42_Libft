@@ -6,12 +6,11 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 12:36:26 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/16 16:10:43 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/16 16:37:34 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
