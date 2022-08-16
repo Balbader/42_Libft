@@ -6,7 +6,7 @@
 #    By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 15:27:12 by baalbade          #+#    #+#              #
-#    Updated: 2022/08/15 17:54:12 by baalbade         ###   ########.fr        #
+#    Updated: 2022/08/16 10:30:33 by baalbade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ RM			=	rm -rf
 
 INC_PATH	=	.
 INC_NAME	=	libft.h
-
 
 SRC_PATH	=	.
 SRC_NAME	=	ft_isalpha.c \
@@ -71,14 +70,32 @@ SRC_NAME_BONUS	= ft_lstnew.c \
 				  ft_lstiter.c \
 				  ft_lstmap.c \
 
+INC			=	$(addprefix $(INC_PATH)/, $(INC_NAME))
+SRC			=	$(addprefix $(SRC_PATH)/, $(SRC_NAME))
+SRC_BONUS	=	$(addprefix $(SRC_PATH)/, $(SRC_NAME_BONUS))
 
-.c.o:
-				${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+.SUFFIXES:		.c .o .h
 
-all:		${NAME}
+OBJ			=	$(SRC:.c=.o)
+OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
 
-${NAME}:	${OBJS}
-				${AR} ${ARFLAGS} ${NAME} ${OBJS}
-				ranlib ${NAME}
+all:		$(NAME)
 
+$(NAME):	$(OBJ) $(INC)
+				$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
+%.o:		%.c
+				$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
+
+bonus:		$(OBJ_BONUS) $(OBJ) $(INC)
+				$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)
+
+clean:
+				$(RM) $(OBJ) $(OBJ_BONUS)
+
+fclean:		clean
+				$(RM) $(NAME)
+
+re:			fclean all
+
+.PHONY:		all bonus clean fclean re
