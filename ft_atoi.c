@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:57:38 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 19:03:37 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:04:51 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	res;
-	int sign;
+	int	sign;
 
 	sign = 1;
 	res = 0;
