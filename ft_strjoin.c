@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 10:22:26 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 10:44:07 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/20 11:03:20 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char			*res;
 	unsigned int	tot_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	tot_len = ft_strlen(s1) + ft_strlen(s2);
 	res = (char *)malloc(sizeof(char) * (tot_len + 1));
 	if (!res)
