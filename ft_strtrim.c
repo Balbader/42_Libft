@@ -6,29 +6,35 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 10:44:45 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 13:23:29 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/20 16:49:20 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	ft_check_char(char c, char const *set)
 {
-	char			*res;
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
 
 	i = 0;
-	while (s1[i])
+	while (set[i])
 	{
-		j = 0;
-		while (set[j])
-		{
-			j++;
-		}
+		if (c == set[i])
+			return (1);
 		i++;
 	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*res;
+	int		i;
+	int		start;
+	int		stop;
+
+	
 	return (res);
 }
 
