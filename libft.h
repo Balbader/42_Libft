@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 10:46:03 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/19 16:18:41 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/20 10:18:30 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 #endif
