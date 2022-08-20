@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:23:40 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/18 17:21:27 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/20 09:54:02 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(count * size);
+	ptr = malloc(sizeof(void *) * (count * size));
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
