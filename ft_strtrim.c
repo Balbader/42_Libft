@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 10:44:45 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 17:08:04 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/20 17:28:56 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (s1[i] && ft_check_char(s1[i], set))
 		i++;
-	j = strlen(s1) - 1;
+	j = ft_strlen(s1) - 1;
 	while (j > i && ft_check_char(s1[j], set))
 		j--;
 	res = (char *)malloc(sizeof(char) * (j - i + 2));
