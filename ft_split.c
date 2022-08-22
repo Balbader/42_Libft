@@ -6,27 +6,13 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/22 19:34:28 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/22 20:14:56 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_split(char c, char const *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-int	ft_count_words(char c, char const *s)
+int	ft_count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -48,31 +34,90 @@ int	ft_count_words(char c, char const *s)
 	return (count);
 }
 
-char	*ft_strcpy(char *dest, char *src)
+int	*ft_strs_len(char const *s, char c)
 {
+	int	*strs_len;
+	int	str_len;
 	int	i;
-	
+	int	j;
+
+	strs_len = (int *)malloc(sizeof(int) * (ft_count_words(s, c) + 1));
+	str_len = 0;
 	i = 0;
-	while (src[i])
+	j = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
 	{
-		dest[i] = src[i];
+		if (s[i] == c || s[i] == '\0')
+		{
+			while (s[i] != '\0' && s[i + 1] == c)
+				i++;
+			strs_len[j] = str_len;
+			str_len = 0;
+			j++;
+			i++;
+		}
+		str_len++;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (strs_len);
+}
+
+char	**ft_alloc_mem(char const *s, char c)
+{
+	char	**tab;
+	int		count;
+	int		*strs_len;
+	int		i;
+
+	count = ft_count_words(s, c);
+	tab = (char **)malloc(sizeof(char *) * (count + 1));
+	strs_len = ft_strs_len(s, c);
+	if (!tab)
+		return (NULL);
+	i = 0;
+	while (i < count)
+	{
+		tab[i] = (char *)malloc(sizeof(char) * (strs_len[i] + 1));
+		i++;
+	}
+	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		count;
+	int		i;
+	int		j;
+	int		k;
 
 	if (!s || !c)
 		return (NULL);
-	count = ft_count_words(c, s);
-	tab = (char **)malloc(sizeof(char *) * (count + 1));
-	if (!tab)
-		return (NULL);
+	count = ft_count_words(s, c);
+	tab = ft_alloc_mem(s, c);
+	k = 0;
+	i = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (k < count)
+	{
+		j = 0;
+		while (s[i])
+		{
+			if (s[i] == c || s[i] == '\0')
+			{
+				while (s[i] != '\0' && s[i + 1] == c)
+					i++;
+				j++;
+				i++;
+			}
+			i++;
+		}
+		k++;
+	}
+	tab[k] = NULL;
 	return (tab);
 }
 
@@ -82,8 +127,16 @@ int	main(void)
 {
 	char	str[] = "       Hello world, how       are you today?  	";
 	int		tot_count;
+	int		*lens;
+	int		i;
 
-	tot_count = ft_count_words(' ', str);
-	printf("%d\n", tot_count);
+	tot_count = ft_count_words(str, ' ');
+	lens = ft_strs_len(str, ' ');
+	i = 0;
+	while (i < tot_count)
+	{
+		printf("%d\n", lens[i]);
+		i++;
+	}
 	return (0);
 }
