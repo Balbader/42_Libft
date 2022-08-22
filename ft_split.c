@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/22 19:29:17 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/22 19:34:28 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,20 @@ int	ft_count_words(char c, char const *s)
 		i++;
 	}
 	return (count);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+	
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 char	**ft_split(char const *s, char c)
