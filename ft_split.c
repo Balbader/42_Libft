@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/22 20:14:56 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/22 20:21:34 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ char	**ft_alloc_mem(char const *s, char c)
 	}
 	return (tab);
 }
+
 
 char	**ft_split(char const *s, char c)
 {
