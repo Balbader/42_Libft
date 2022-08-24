@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 12:43:58 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 12:45:08 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/24 12:50:04 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
+	unsigned int	i;
 
+	if (s != 0 && f != 0)
+	{
+		i = 0;
+		while (s[i])
+		{
+			f(i, s + i);
+			i++;
+		}
+	}
 }
