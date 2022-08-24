@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 10:46:03 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/21 07:08:23 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/24 09:07:36 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
