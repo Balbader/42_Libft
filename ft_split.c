@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 08:59:17 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/24 09:05:24 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	*ft_strs_len(char const *s, char c)
 		{
 			while (s[i] != '\0' && s[i + 1] == c)
 				i++;
-			strs_len[j++] = str_len;
+			strs_len[++j] = str_len;
 			str_len = 0;
 			i++;
 		}
