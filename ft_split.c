@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/22 20:21:34 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/24 08:59:17 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	*ft_strs_len(char const *s, char c)
 	strs_len = (int *)malloc(sizeof(int) * (ft_count_words(s, c) + 1));
 	str_len = 0;
 	i = 0;
-	j = 0;
+	j = -1;
 	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
@@ -53,9 +53,8 @@ int	*ft_strs_len(char const *s, char c)
 		{
 			while (s[i] != '\0' && s[i + 1] == c)
 				i++;
-			strs_len[j] = str_len;
+			strs_len[j++] = str_len;
 			str_len = 0;
-			j++;
 			i++;
 		}
 		str_len++;
