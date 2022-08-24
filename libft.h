@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 10:46:03 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 12:45:47 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/24 12:55:53 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*st_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
 
 #endif
