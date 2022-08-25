@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_split.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 17:09:28 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 10:46:48 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/25 08:54:04 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words_nb = ft_count_words(s, c);
-	tab = malloc(sizeof(char *) * (words_nb + 1));
+	tab = (char **)malloc(sizeof(char *) * (words_nb + 1));
 	if (!tab)
 		return (0);
 	i = 0;
