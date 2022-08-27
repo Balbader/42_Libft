@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 12:29:49 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/26 12:31:21 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/27 09:04:43 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,3 @@ t_list	*ft_last(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
