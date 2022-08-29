@@ -6,7 +6,7 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 12:28:54 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 12:43:05 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/08/29 17:12:34 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
