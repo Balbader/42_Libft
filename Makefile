@@ -6,7 +6,7 @@
 #    By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 15:27:12 by baalbade          #+#    #+#              #
-#    Updated: 2022/08/24 13:28:59 by baalbade         ###   ########.fr        #
+#    Updated: 2022/08/29 17:11:25 by baalbade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,6 @@ SRC_NAME	=	ft_isalpha.c \
 				ft_strnstr.c \
 				ft_atoi.c \
 				ft_calloc.c \
-				ft_malloc.c \
 				ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
