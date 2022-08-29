@@ -6,7 +6,7 @@
 #    By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 15:27:12 by baalbade          #+#    #+#              #
-#    Updated: 2022/08/29 17:11:25 by baalbade         ###   ########.fr        #
+#    Updated: 2022/08/29 17:13:33 by baalbade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ SRC_NAME	=	ft_isalpha.c \
 				ft_itoa.c \
 				ft_strmapi.c \
 				ft_striteri.c \
-				ft_puchar_fd.c \
+				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
