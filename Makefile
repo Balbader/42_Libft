@@ -6,26 +6,26 @@
 #    By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/15 15:27:12 by baalbade          #+#    #+#              #
-#    Updated: 2022/09/08 20:59:34 by baalbade         ###   ########.fr        #
+#    Updated: 2022/09/08 21:00:46 by baalbade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=		libft.a
+NAME			=	libft.a
 
-CC			=		gcc
-CFLAGS		=		-Wall -Wextra -Werror
-IFLAGS		=		-I$(INC_PATH)
+CC				=	gcc
+CFLAGS			=	-Wall -Wextra -Werror
+IFLAGS			=	-I$(INC_PATH)
 
-AR			=		ar
-ARFLAGS		=		rc
+AR				=	ar
+ARFLAGS			=	rc
 
-RM			=		rm -rf
+RM				=	rm -rf
 
-INC_PATH	=		.
-INC_NAME	=		libft.h
+INC_PATH		=	.
+INC_NAME		=	libft.h
 
-SRC_PATH	=		.
-SRC_NAME	=		ft_isalpha.c \
+SRC_PATH		=	.
+SRC_NAME		=	ft_isalpha.c \
 					ft_isdigit.c \
 					ft_isalnum.c \
 					ft_isascii.c \
