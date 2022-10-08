@@ -6,44 +6,28 @@
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 10:22:26 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 11:03:20 by baalbade         ###   ########.fr       */
+/*   Updated: 2022/10/08 21:12:18 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dst, const char *src)
-{
-	unsigned int	i;
-	unsigned int	j;
-
-	i = 0;
-	while (dst[i])
-		i++;
-	j = 0;
-	while (src[j])
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*res;
-	unsigned int	tot_len;
+	char	*s3;
+	int		i;
+	int		j;
 
-	if (!s1 || !s2)
+	s3 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!s3)
 		return (NULL);
-	tot_len = ft_strlen(s1) + ft_strlen(s2);
-	res = (char *)malloc(sizeof(char) * (tot_len + 1));
-	if (!res)
-		return (NULL);
-	ft_strcat(res, s1);
-	ft_strcat(res, s2);
-	res[tot_len - 1] = '\0';
-	return (res);
+	j = 0;
+	i = 0;
+	while (s1[i])
+		s3[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		s3[j++] = s2[i++];
+	s3[j] = '\0';
+	return (s3);
 }
