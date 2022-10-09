@@ -1,13 +1,6 @@
-<br />
-<p align="center">
-  <a href="https://raw.githubusercontent.com/othneildrew/Best-README-Template/master/images/logo.png">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/1200px-42_Logo.svg.png" alt="Logo" width="250" height="250">
-  </a>
+# 42 - LIBFT
 
-  <h3 align="center">42-Libft</h3>
-</p>
-
-# Index
+## Index
 
 * [About](#What-is-Libft?)
 * [List of Functions](#tabs-List-of-Fucntions)
@@ -15,7 +8,7 @@
 * [How to Run](#How-to-Run)
 * [Find a Bug? Or somenthing need to change?](#Issues)
 
-# What is Libft?
+## What is Libft?
 
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
@@ -23,9 +16,9 @@ Libft is an individual project at 42 that requires us to re-create some standard
 
 At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go further in the program.
 
-# List of Fucntions
+## List of Fucntions
 
-## Functions from `<ctype.h>`
+### Functions from `<ctype.h>`
 
 - [x] [`ft_isalpha`](ft_isalpha.c)	- checks for an alphabetic character.
 - [x] [`ft_isdigit`](ft_isdigit.c)	- check for a digit (0 through 9).
@@ -35,7 +28,7 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
 - [x] [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
 
-## Functions from `<string.h>`
+### Functions from `<string.h>`
 
 - [x] [`ft_strlen`](ft_strlen.c)	- calculate the length of a string.
 - [x] [`ft_memset`](ft_memset.c)	- fill memory with a constant byte.
@@ -52,11 +45,12 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_strnstr`](ft_strnstr.c)	- locate a substring in a string.
 - [x] [`ft_strdup`](ft_strdup.c)	- creates a duplicate for the string passed as a parameter.
 
-## Functions from `<stdlib.h>`
+### Functions from `<stdlib.h>`
+
 - [x] [`ft_atoi`](ft_atoi.c)	- convert a string to an integer.
 - [x] [`ft_calloc`](ft_calloc.c)	- allocates memory and sets its bytes' values to 0.
 
-## Non-standard functions
+### Non-standard functions
 - [x] [`ft_substr`](ft_substr.c)	- returns a substring from a string.
 - [x] [`ft_strjoin`](ft_strjoin.c)	- concatenates two strings.
 - [x] [`ft_strtrim`](ft_strtrim.c)	- trims the beginning and end of a string with a specific set of chars.
@@ -69,7 +63,7 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
 - [x] [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output a number to a file descriptor.
 
-## Linked list functions
+### Linked list functions
 
 - [x] [`ft_lstnew`](ft_lstnew.c)	- creates a new list element.
 - [x] [`ft_lstadd_front`](ft_lstadd_front.c)	- adds an element at the beginning of a list.
@@ -80,7 +74,7 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
 - [x] [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
 
-# How to Run
+## How to Run
 ```bash
 # *************COMMANDS************ #
 # run - run compile all the libtest with the your libft and run the all tests
