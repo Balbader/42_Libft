@@ -7,26 +7,15 @@
   <h3 align="center">42-Libft</h3>
 </p>
 
+# Index
 
-<p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/jdecorte-be/42-Libft?color=lightblue" />
-	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/jdecorte-be/42-Libft?color=critical" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/jdecorte-be/42-Libft?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jdecorte-be/42-Libft?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jdecorte-be/42-Libft?color=green" />
-</p>
+* [About](#What-is-Libft?)
+* [List of Functions](#tabs-List-of-Fucntions)
+* [Technologies](#Technologies)
+* [How to Run](#How-to-Run)
+* [Find a Bug? Or somenthing need to change?](#Issues)
 
-
-
-# :pushpin: Index
-
-* [What's this Repo?](#sparkles-What-is-Libft?)
-* [List of Functions](#bookmark_tabs-List-of-Fucntions)
-* [Technologies](#computer-Technologies)
-* [How to Run](#construction_worker-How-to-Run)
-* [Find a Bug? Or somenthing need to change?](#bug-Issues)
-
-# :sparkles: What is Libft?
+# What is Libft?
 
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
@@ -34,9 +23,7 @@ Libft is an individual project at 42 that requires us to re-create some standard
 
 At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go further in the program.
 
----
-
-# :bookmark_tabs: List of Fucntions
+# List of Fucntions
 
 ## Functions from `<ctype.h>`
 
@@ -93,18 +80,7 @@ At 42 we're not allowed to use some standard libraries on our projects, so we ha
 - [x] [`ft_lstiter`](ft_lstiter.c)	- applies a function to each element of a list.
 - [x] [`ft_lstmap`](ft_lstmap.c)	- applies a function to each element of a list.
 
----
-
-# :computer: Technologies
-
-This Project was made with:
-
-* [C](https://devdocs.io/)
-* [Makefile](https://www.gnu.org/software/make/manual/make.html)
-* [Shell](https://unixguide.readthedocs.io/en/latest/unixcheatsheet/)
-* [gcc](https://terminaldeinformacao.com/2015/10/08/como-instalar-e-configurar-o-gcc-no-windows-mingw/)
-
-# :construction_worker: How to Run
+# How to Run
 ```bash
 # *************COMMANDS************ #
 # run - run compile all the libtest with the your libft and run the all tests
