@@ -2,10 +2,9 @@
 
 ## Index
 
-* [About](#What-is-Libft?)
-* [List of Functions](#tabs-List-of-Fucntions)
-* [How to Run](#How-to-Run)
-* [Find a Bug? Or somenthing need to change?](#Issues)
+* [About](##What-is-Libft?)
+* [List of Functions](##-List-of-Fucntions)
+* [How to Run](##How-to-Run)
 
 ## What is Libft?
 
