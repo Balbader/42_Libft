@@ -4,7 +4,6 @@
 
 * [About](#What-is-Libft?)
 * [List of Functions](#tabs-List-of-Fucntions)
-* [Technologies](#Technologies)
 * [How to Run](#How-to-Run)
 * [Find a Bug? Or somenthing need to change?](#Issues)
 
