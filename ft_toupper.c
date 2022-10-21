@@ -14,7 +14,10 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return ((unsigned char)c);
+	unsigned char	test;
+
+	test = c;
+	if (test >= 'a' && test <= 'z')
+		return (c -= 32);
+	return (0);
 }
