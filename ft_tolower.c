@@ -14,7 +14,10 @@
 
 int	ft_tolwer(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return ((unsigned char)c);
+	unsigned char	test;
+
+	test = c;
+	if (test >= 'A' && test <= 'Z')
+		return (test += 32);
+	return (0);
 }
