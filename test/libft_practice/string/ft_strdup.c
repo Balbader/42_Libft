@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -17,4 +18,15 @@ char	*ft_strdup(const char *s1)
 	}
 	cpy[i] = '\0';
 	return (cpy);
+}
+
+int	main(void)
+{
+	// char	*s1 = "Hello World";
+	char	*s1 = "\0";
+	char	*dup;
+
+	dup = ft_strdup(s1);
+	printf("%s\n", dup);
+	return (0);
 }
