@@ -33,3 +33,4 @@ int	main(void)
 	printf("%s\n", strnstr(haystack, needle, 10));
 	return (0);
 }
+
