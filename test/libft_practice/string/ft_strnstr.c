@@ -4,7 +4,20 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	
+	char	*str;
+	char	*to_find;
+	size_t	i;
+	size_t	j;
+
+	str = (char *)haystack;
+	to_find = (char *)needle;
+	i = 0;
+	while (str[i] && i < len)
+	{
+		i++;
+	}
+
+	return (NULL);
 }
 
 int	main(void)
