@@ -12,45 +12,54 @@
 
 #include "libft.h"
 
-int	ft_is_neg(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
-int	ft_get_len(int n)
+int	ft_get_len(long nb)
 {
 	int	len;
 
 	len = 0;
-	if (n < 0)
-		len++;
-	while (n != 0)
+	if (nb < 0)
 	{
+		nb *= -1;
 		len++;
-		n /= 10;
+	}
+	while (nb > 0)
+	{
+		nb /= 10;
+		len++;
 	}
 	return (len);
 }
 
-char	*ft_itoa(int nbr)
+char	*ft_check_nb(long nb, char *str)
+{
+	if (nb == 0)
+		str[0] = '0';
+	return (str);
+}
+
+char	*ft_itoa(int n)
 {
 	char	*str;
+	long	nb;
 	int		len;
 
-	len = ft_get_len(nbr);
-	str = malloc(sizeof(char) * (len + 1));
-	str[len] = '\0';
-	if (nbr < 0)
-		str[0] = '-';
-	else if (nbr == 0)
-		str[0] = '0';
-	while (nbr != 0)
+	nb = n;
+	len = ft_get_len(nb);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len--] = '\0';
+	ft_check_nb(nb, str);
+	if (nb < 0)
 	{
+		str[0] = '-';
+		nb *= -1;
+	}
+	while (nb > 0)
+	{
+		str[len] = nb % 10 + '0';
+		nb /= 10;
 		len--;
-		str[len] = ft_is_neg(nbr % 10) + '0';
-		nbr /= 10;
 	}
 	return (str);
 }
