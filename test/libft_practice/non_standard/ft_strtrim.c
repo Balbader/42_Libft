@@ -16,48 +16,45 @@ int	ft_check_char(char c, char *trim)
 	return (0);
 }
 
-int	ft_trim_len(char *str, char *trim)
-{
-	int	len;
-	int	i;
-
-	len = 0;
-	i = 0;
-	while (str[i])
-	{
-		if (ft_check_char(str[i], trim))
-			len++;
-		i++;
-	} return (len);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	int		len_to_trim;
+	char	*res;
 	int		i;
 	int		j;
+	int		k;
 
-	len_to_trim = ft_trim_len((char *)s1, (char *)set);
-	str = (char *)malloc(sizeof(char) *
-					  (strlen((char *)s1) - len_to_trim) + 1);
-	if (!str)
-		return (NULL);
 	i = 0;
-	while (ft_check_char(((char *)s1)[i], ((char *)set)))
+	while (((char *)s1)[i] && ft_check_char(((char *)s1)[i], ((char *)set)))
 		i++;
-	return (str);
+	j = strlen((char *)s1) - 1;
+	while (j > i && ft_check_char(((char *)s1)[j], ((char *)set)))
+		j--;
+	res = (char *)malloc(sizeof(char) * (j - i + 2));
+	if (!res)
+		return (NULL);
+	k = 0;
+	while (i <= j)
+	{
+		res[k] = ((char *)s1)[i];
+		i++;
+		k++;
+	}
+	res[k] = '\0';
+	return (res);
 }
 
 int	main(void)
 {
-	char 	*str = "abcabcabc Hello world abcabcabc";
-	char	*trim = "abc ";
 	char	*res;
-	int		len_to_trim;
+	char 	*str = "abcabcabc Hello world abcabcabc";
+	// char 	*str = "            Hello world              asdf";
+	// char	*trim = "abc ";
+	// char	*trim = " ";
+	char	*trim = "a";
+	// char	*trim = "b";
+	// char	*trim = "c";
 
-	len_to_trim = ft_trim_len(str, trim);
-	printf("%d\n", len_to_trim);
+	printf("strlen(str): %ld\n", strlen(str));
 	res = ft_strtrim(str, trim);
 	printf("%s\n", res);
 	return (0);
