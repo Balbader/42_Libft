@@ -11,10 +11,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
+
+static void	ft_free_strs(char *strings)
+{
+	size_t	i;
+
+	i = 0;
+	while (strings[i])
+	{
+		free(strings);
+		i++;
+	}
+	free(strings);
+}
 
 static char	*ft_strdup_spe(char const *s, char c)
 {
-	int		i;
+	size_t	i;
 	char	*dst;
 
 	i = 0;
@@ -74,6 +88,8 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 		tab[j++] = ft_strdup_spe(s + i, c);
+		if (!tab[j])
+			ft_free_strs(tab[j]);
 		while (s[i] && s[i] != c)
 			i++;
 	}
