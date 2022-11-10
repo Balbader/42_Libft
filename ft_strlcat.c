@@ -24,11 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	j = 0;
 	while (src[i] && i < dstsize - 1)
-	{
-		dst[i] = src[j];
-		j++;
-		i++;
-	}
+		dst[i++] = src[j++];
 	dst[i] = '\0';
 	return (ft_strlen(dst) + ft_strlen(src));
 }
