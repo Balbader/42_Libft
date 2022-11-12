@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 11:05:30 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 11:13:35 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 11:09:03 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 11:09:05 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char	to_find;
+	unsigned char	*str;
+	size_t			i;
 
+	to_find = c;
+	str = (unsigned char *)s;
 	i = 0;
-	while (((unsigned char *)s)[i] && i < n)
+	while (i < n)
 	{
-		if (((char *)s)[i] == (unsigned char)c)
-			return ((void *)s + i);
+		if (str[i] == to_find)
+			return ((char *)s + i);
 		i++;
 	}
 	return (NULL);
