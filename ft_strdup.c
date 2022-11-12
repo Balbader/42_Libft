@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 19:05:37 by baalbade          #+#    #+#             */
-/*   Updated: 2022/10/08 22:42:16 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:21:50 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:21:52 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ char	*ft_strdup(const char *s1)
 {
 	char	*cpy;
 	int		i;
-	int		j;
 
-	cpy = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	cpy = (char *)malloc(sizeof(char) * (strlen(s1) + 1));
 	if (!cpy)
 		return (NULL);
-	j = 0;
 	i = 0;
 	while (s1[i])
-		cpy[j++] = s1[i++];
-	cpy[j] = '\0';
+	{
+		cpy[i] = s1[i];
+		i++;
+	}
+	cpy[i] = '\0';
 	return (cpy);
 }

@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 10:44:45 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 17:28:56 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:44:17 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:44:20 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_char(char c, char const *set)
+int	ft_check_char(char c, char *trim)
 {
 	int	i;
 
 	i = 0;
-	while (set[i])
+	while (trim[i])
 	{
-		if (c == set[i])
+		if (c == trim[i])
 			return (1);
 		i++;
 	}
@@ -33,20 +33,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		k;
 
-	if (!s1 || !set)
-		return (NULL);
 	i = 0;
-	while (s1[i] && ft_check_char(s1[i], set))
+	while (((char *)s1)[i] && ft_check_char(((char *)s1)[i], ((char *)set)))
 		i++;
-	j = ft_strlen(s1) - 1;
-	while (j > i && ft_check_char(s1[j], set))
+	j = strlen((char *)s1) - 1;
+	while (j > i && ft_check_char(((char *)s1)[j], ((char *)set)))
 		j--;
 	res = (char *)malloc(sizeof(char) * (j - i + 2));
 	if (!res)
 		return (NULL);
 	k = 0;
 	while (i <= j)
-		res[k++] = s1[i++];
+	{
+		res[k] = ((char *)s1)[i];
+		i++;
+		k++;
+	}
 	res[k] = '\0';
 	return (res);
 }

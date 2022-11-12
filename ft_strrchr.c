@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 10:40:44 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 10:59:13 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:38:12 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:38:13 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 
-	if ((char)c == '\0')
-		return ((char *)s + ft_strlen(s));
 	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)s + i);
 	while (i >= 0)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == c)
 			return ((char *)s + i);
 		i--;
 	}

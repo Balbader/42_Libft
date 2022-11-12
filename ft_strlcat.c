@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 10:03:49 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 10:16:12 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:26:09 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:26:11 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	j;
 
-	if (dstsize == 0)
-		return (0);
 	i = 0;
-	while (dst[i])
-		i++;
 	j = 0;
-	while (src[i] && i < dstsize - 1)
-		dst[i++] = src[j++];
-	dst[i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(src));
+	while (dst[i] && i < dstsize)
+		i++;
+	while (src[j] && (i + j + 1) < dstsize)
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i < dstsize)
+		dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }

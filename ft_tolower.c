@@ -5,19 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 10:22:00 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 10:24:59 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 10:55:08 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 10:55:10 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolwer(int c)
+int	ft_tolower(int c)
 {
-	unsigned char	test;
-
-	test = c;
-	if (test >= 'A' && test <= 'Z')
-		return (test += 32);
-	return (0);
+	if ( c >= 'A' && c <= 'Z')
+		return ( c + 32);
+	return (c);
 }

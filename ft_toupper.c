@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 10:17:07 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 10:21:24 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 10:58:04 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 10:58:08 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	test;
-
-	test = c;
-	if (test >= 'a' && test <= 'z')
-		return (c -= 32);
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

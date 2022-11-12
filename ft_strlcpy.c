@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 08:26:14 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/17 08:43:48 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:30:26 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:30:28 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	src_len;
 
-	src_len = ft_strlen(src);
 	i = 0;
 	if (dstsize == 0)
-		return (src_len);
-	while (src[i] && i < dstsize - 1)
+	{
+		while (src[i])
+			i++;
+		return (i);
+	}
+	while (i < dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	if (i < dstsize)
+		dst[i] = '\0';
+	return (ft_strlen(src));
 }
