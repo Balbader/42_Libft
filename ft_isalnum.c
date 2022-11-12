@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 11:05:56 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/16 11:08:37 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 10:48:37 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 10:48:39 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
 	return (0);
 }
