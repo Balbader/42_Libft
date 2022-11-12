@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 11:13:10 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/16 11:14:14 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 10:54:09 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 10:54:11 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
+	unsigned char	test;
+
+	test = c;
+	if (test >= 32 && test < 127)
 		return (1);
 	return (0);
 }
