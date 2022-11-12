@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 10:49:17 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/24 11:31:49 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/12 17:39:10 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/12 17:39:12 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_get_len(long nb)
+int		ft_get_len(long nb)
 {
 	int	len;
-
 	len = 0;
+
 	if (nb < 0)
 	{
 		nb *= -1;
