@@ -23,7 +23,7 @@ static size_t	ft_count_words(char *str, char split)
 		i++;
 	while (str[i])
 	{
-		if (str[i] == split && str[i + 1] != split)
+		if (str[i] != split && (str[i + 1] == split || str[i + 1] == '\0'))
 			word_count++;
 		i++;
 	}
@@ -72,6 +72,19 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	tab[j] = 0;
+	tab[j] = NULL;
 	return (tab);
+}
+
+#include <stdio.h>
+
+int main() {
+	char **tab;
+	char *str = 0;
+	char split = 0;
+
+	tab = ft_split(str, split);
+	for (size_t i = 0; i < ft_count_words(str, split); i++) {
+		printf("%s\n", tab[i]);
+	}
 }
