@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 17:19:39 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 17:19:41 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 13:35:36 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 13:35:39 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	str = (char *)s;
 	if ((char)c == '\0')
-		return (str + strlen(str));
+		return (str + ft_strlen(str));
 	i = 0;
 	while (str[i])
 	{

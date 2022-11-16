@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 10:59:23 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 10:59:25 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/11 07:46:29 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/11 07:46:31 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		return ;
 	ft_memset(s, 0, n);
 }

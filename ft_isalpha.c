@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 10:50:44 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 10:50:47 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 08:17:18 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 08:17:22 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_isalpha(int c)
 {
-	unsigned char	test;
+	unsigned char	elem;
 
-	test = c;
-	if ((test >= 'A' && test <= 'Z') || (test >= 'a' && test <= 'z'))
+	elem = c;
+	if ((elem >= 'a' && elem <= 'z') || (elem >= 'A' && elem <= 'Z'))
 		return (1);
 	return (0);
 }

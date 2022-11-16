@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 11:01:50 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 11:01:52 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/11 08:58:49 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/11 08:58:51 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*ptr;
+	size_t	i;
 
-	ptr = (char *)b;
-	while (len > 0)
+	i = 0;
+	while (i < len)
 	{
-		ptr[len - 1] = c;
-		len--;
+		((char *)b)[i] = (char)c;
+		i++;
 	}
 	return (b);
 }

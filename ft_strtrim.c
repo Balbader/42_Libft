@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 17:44:17 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 17:44:20 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 15:46:50 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 15:46:53 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_char(char c, char *trim)
+int	ft_check_char(char c, char *set)
 {
 	int	i;
 
 	i = 0;
-	while (trim[i])
+	while (set[i])
 	{
-		if (c == trim[i])
+		if (c == set[i])
 			return (1);
 		i++;
 	}
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (((char *)s1)[i] && ft_check_char(((char *)s1)[i], ((char *)set)))
 		i++;
-	j = strlen((char *)s1) - 1;
+	j = ft_strlen((char *)s1) - 1;
 	while (j > i && ft_check_char(((char *)s1)[j], ((char *)set)))
 		j--;
 	res = (char *)malloc(sizeof(char) * (j - i + 2));

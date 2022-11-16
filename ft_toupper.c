@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 10:58:04 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 10:58:08 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 08:48:03 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 08:48:09 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	unsigned char	elem;
+
+	elem = c;
+	if (elem >= 'a' && elem <= 'z')
+		elem -= 32;
+	return (elem);
 }

@@ -3,36 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 17:36:15 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 17:36:17 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 13:49:37 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 13:49:39 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (needle == NULL || needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	if (((char *)little)[i] == '\0')
+		return ((char *)big);
+	while (big[i] && i < len)
 	{
-		if (haystack[i] == needle[j])
-		{
-			while (haystack[i + j] == needle[j] && i + j < len)
-			{
-				if (needle[j + 1] == '\0')
-					return ((char *)haystack + i);
-				j++;
-			}
-			j = 0;
-		}	
+		j = 0;
+		while (big[i + j] && little[j] && i + j < len
+			&& big[i + j] == little[j])
+			j++;
+		if (!little[j])
+			return ((char *)big + i);
 		i++;
 	}
 	return (NULL);

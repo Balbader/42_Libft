@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 10:55:08 by baalbade          #+#    #+#             */
-/*   Updated: 2022/11/12 10:55:10 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 08:51:42 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 08:51:49 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_tolower(int c)
 {
-	if ( c >= 'A' && c <= 'Z')
-		return ( c + 32);
-	return (c);
+	unsigned char	elem;
+
+	elem = c;
+	if (elem >= 'A' && elem <= 'Z')
+		elem += 32;
+	return (elem);
 }

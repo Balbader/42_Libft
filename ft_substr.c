@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baalbade <baalbade@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baalbade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 10:04:09 by baalbade          #+#    #+#             */
-/*   Updated: 2022/08/20 10:21:44 by baalbade         ###   ########.fr       */
+/*   Created: 2022/11/08 15:02:58 by baalbade          #+#    #+#             */
+/*   Updated: 2022/11/08 15:03:12 by baalbade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,29 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
+	char	*new_str;
 	size_t	i;
 
-	if (s[0] == '\0')
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (NULL);
-	sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (!sub)
+	if (start > ft_strlen(s) || (start > ft_strlen(s) && len > ft_strlen(s)))
+	{
+		i = 0;
+		new_str = (char *)malloc(sizeof(char));
+		ft_strlcpy(new_str, "", 1);
+		return (new_str);
+	}
+	if (len + start > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	new_str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!new_str)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < len && i + start < ft_strlen(s) && s[i] != '\0')
 	{
-		sub[i] = s[start + i];
+		new_str[i] = s[i + start];
 		i++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	new_str[i] = '\0';
+	return (new_str);
 }
